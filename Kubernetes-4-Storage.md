@@ -40,6 +40,8 @@ spec:
       containers:
       - name: ubuntu
         image: debian
+        command: [ "sleep" ]
+        args: [ "infinity" ]
         volumeMounts:
         - mountPath: /mnt
           name: storage
@@ -48,6 +50,8 @@ spec:
         persistentVolumeClaim:
           claimName: task-pv-claim
 ```
+
+The `infinity sleep` is needed to keep the container alive (similar to docker). A succeeding pod in a deployment is considered a failure and results in rescheduling and crashloops. 
 
 ### 2 - Secrets / Configmaps
 
