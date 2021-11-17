@@ -1,6 +1,6 @@
 # Kubernetes 101 - Getting started
  
-### 0 Installing and configuring kubectl
+### 0 - Installing and configuring kubectl
  
 The primary source for the Hands-On session is the [official kubernetes documentation](https://kubernetes.io/docs/home/). 
  
@@ -11,7 +11,7 @@ Login to the Rancher WebUI with your designated username and password and select
 Test the configuration by running: `kubectl get pods -n <namespace>`. 
 A working configuration is indicated by a message like this: `No resources found in <namespace> namespace.`
  
-### 1 Running simple pods via YAML
+### 1 - Running simple pods via YAML
  
 Pods are the most basic resource for running workloads in a kubernetes cluster.
 Every resource for kubernetes can be described as YAML file. For example a simple pod can look like this:
@@ -35,7 +35,7 @@ spec:
 
 Tip: You can change your context for a default namespace with `kubectl config set-context --current --namespace=<insert-namespace-name-here>`. If this is set to your specific namespace the `-n <namespace>` parameter can be omitted.
 
-### 1 (Excursus) Imperative use of kubectl
+### 1 - (Excursus) Imperative use of kubectl
 
 Most kubectl commands can either be used declarative via a YAML file or optionally imperative (similar to docker).
 
@@ -56,7 +56,7 @@ This procedure can also be used to create an interactive pod session on the fly:
 
 For additional tips and tricks please visit the official kubernetes [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 
-### 2 Jobs
+### 2 - Jobs
 
 Jobs are kubernetes resources that manage pods intended to run to (successful) completion (like calculations or tasks). This is similar to regular batch processing engines like SLURM or SGE.
 
