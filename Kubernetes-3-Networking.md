@@ -58,10 +58,13 @@ spec:
   - host: demo.clum.biokube.org
     http:
       paths:
-      - path: /
+      - pathType: Prefix
+        path: /
         backend:
-          serviceName: nginx-service
-          servicePort: 80
+          service:
+            name: nginx-service
+            port:
+              number: 80
 ```
 
 This Ingress routes the publicly available subdomain `demo.clum.biokube.org` to the nginx service / deployment.
