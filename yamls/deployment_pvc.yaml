@@ -5,7 +5,7 @@ metadata:
   labels:
     app: ubuntu
 spec:
-  replicas: 1
+  replicas: 5
   selector:
     matchLabels:
       app: ubuntu
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: ubuntu
-        image: debian:buster-slim
+        image: quay.io/jitesoft/debian:buster-slim 
         command: [ "sleep" ]
         args: [ "infinity" ]
         volumeMounts:
@@ -25,4 +25,4 @@ spec:
       volumes:
       - name: storage
         persistentVolumeClaim:
-          claimName: task-pv-claim
+          claimName: task-pv-claim-rwm
