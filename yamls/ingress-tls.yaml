@@ -8,10 +8,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - demo.clum.biokube.org
-    secretName: demo-clum-secret-tls
+    - mydomain.demo00.clum.biokube.org
+    secretName: demo00-clum-secret-tls
   rules:
-  - host: demo.clum.biokube.org
+  - host: mydomain.demo00.clum.biokube.org
     http:
       paths:
       - path: /
