@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: task-pv-claim-rwm
 spec:
-  storageClassName: longhorn
+  storageClassName: nfs-storage
   accessModes:
     - ReadWriteMany
   resources:
