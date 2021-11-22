@@ -8,10 +8,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - demo.clum.biokube.org
+    - yeet.demo05.clum.biokube.org
     secretName: demo-clum-secret-tls
   rules:
-  - host: demo.clum.biokube.org
+  - host: yeet.demo05.clum.biokube.org
     http:
       paths:
       - path: /

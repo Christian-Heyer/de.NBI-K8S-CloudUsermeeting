@@ -6,7 +6,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: demo.clum.biokube.org
+  - host: yeet.demo05.clum.biokube.org
     http:
       paths:
       - pathType: Prefix
